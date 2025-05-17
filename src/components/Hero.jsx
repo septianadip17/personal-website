@@ -1,13 +1,16 @@
 import React from "react";
 import programmer from "../assets/programmer.svg";
-import grid from "../assets/icons/grid.svg"
-import profile from "../assets/icons/profile.svg"
-import monitor from "../assets/icons/monitor.svg"
-import code from "../assets/icons/code.svg"
-import edit from "../assets/icons/edit.svg"
-import mail from "../assets/icons/mail.svg"
-import greenMail from "../assets/icons/greenmail.svg"
-
+import grid from "../assets/icons/grid.svg";
+import profile from "../assets/icons/profile.svg";
+import monitor from "../assets/icons/monitor.svg";
+import code from "../assets/icons/code.svg";
+import edit from "../assets/icons/edit.svg";
+import mail from "../assets/icons/mail.svg";
+import greenMail from "../assets/icons/greenmail.svg";
+import location from "../assets/icons/location.svg";
+import briefcase from "../assets/icons/briefcase.svg";
+import link from "../assets/icons/link.svg";
+import download from "../assets/icons/download.svg";
 
 // sidebar navigation
 function SideNav() {
@@ -43,10 +46,10 @@ function SideNav() {
 function ProfileCard() {
   const skills = ["HTML", "CSS", "JS", "REACT"];
   const info = [
-    { icon: "fa-envelope", text: "abdurrahman_sinan@hotmail.com" },
-    { icon: "fa-map-marker-alt", text: "Turkey" },
-    { icon: "fa-briefcase", text: "Full-time / Freelancer" },
-    { icon: "fa-link", text: "www.sinantokmak.com" },
+    { icon: greenMail, text: "septianadip7998@gmail.com", alt: "mail" },
+    { icon: location, text: "Indonesia", alt: "location" },
+    { icon: briefcase, text: "Full-time / Freelancer", alt: "work" },
+    { icon: link, text: "linkedin.com/in/septianadip17", alt: "link" },
   ];
 
   return (
@@ -61,9 +64,9 @@ function ProfileCard() {
         <h2 className="text-lg font-mono font-semibold">Sinan</h2>
         <p className="text-xs font-mono text-white/80">Full-stack developer</p>
         <ul className="mt-4 space-y-2 text-xs font-mono text-white/80 text-left w-full max-w-[220px]">
-          {info.map(({ icon, text }) => (
+          {info.map(({ icon, text, alt }) => (
             <li key={text} className="flex items-center gap-2">
-              <i className={`fas ${icon} text-[#7FFFD4] text-[12px]`}></i>
+              <img src={icon} alt={alt} className="w-4 h-4" />
               {text}
             </li>
           ))}
@@ -79,7 +82,7 @@ function ProfileCard() {
           ))}
         </div>
         <button className="mt-6 bg-white text-[#282E34] rounded-full px-6 py-2 flex items-center gap-2 text-sm">
-          Download CV <i className="fas fa-file-download text-[#B94A48]" />
+          Download CV <img src={download} alt="download-icon" className="w-4 h-4" />
         </button>
       </div>
     </div>
