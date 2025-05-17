@@ -1,5 +1,6 @@
 import React from "react";
 import work from "../assets/work.png";
+import SectionTitle from "./SectionTitle";
 
 const About = () => {
   return (
@@ -47,7 +48,6 @@ const About = () => {
           </div>
         </div>
       </div>
-     
     </div>
   );
 };
