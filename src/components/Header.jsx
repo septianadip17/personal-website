@@ -1,46 +1,49 @@
-import React from "react";
+import { FaInstagram, FaDiscord, FaGithub } from "react-icons/fa";
 
-const Header = () => {
+export default function Header() {
   return (
-      <div className="container flex justify-between mx-auto">
-        <div className="flex items-center">
-          <span className="text-accent text-lg">&lt;C/&gt;</span>
-          <span className="text-2xl font-bold ml-2">SinanTokmak</span>
+    <div className="bg-gray-900 border-2 border-red-">
+      <header className="flex justify-between px-6 py-4 border-b border-gray-700 bg-gray-900 text-white mx-auto container">
+        {/* Logo */}
+        <div className="text-xl font-bold">
+          <span className="text-teal-400">&lt;C/&gt;</span> Septian Adi Pratama
         </div>
-        <nav className="flex space-x-4">
-          <a href="#" className="text-accent hover:text-accent/80">
+
+        {/* Right Items */}
+        <nav className="hidden md:flex space-x-6 text-sm font-mono">
+          <a href="#home" className="text-teal-400">
             Home
           </a>
-          <a href="#" className="text-accent hover:text-accent/80">
-            Blogs
-          </a>
-          <div className="relative">
+          <a href="#blogs">Blogs</a>
+          <div className="flex items-center space-x-3">
             <input
               type="text"
-              placeholder="Search..."
-              className="border border-border rounded-lg p-2"
+              placeholder="Search"
+              className="px-3 py-1 rounded-full bg-white text-black text-sm hidden md:block"
             />
-            <button className="absolute right-2 top-1/2 transform -translate-y-1/2">
-              <img
-                alt="search-icon"
-                src="https://openui.fly.dev/openui/24x24.svg?text=🔍"
-              />
-            </button>
+            <a
+              href="#"
+              className="flex items-center space-x-1 hover:text-teal-400"
+            >
+              <FaInstagram />{" "}
+              <span className="hidden md:inline">Instagram</span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center space-x-1 hover:text-teal-400"
+            >
+              <FaDiscord /> <span className="hidden md:inline">Discord</span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center space-x-1 hover:text-teal-400"
+            >
+              <FaGithub /> <span className="hidden md:inline">Github</span>
+            </a>
           </div>
         </nav>
-        <div className="flex space-x-4">
-          <a href="#" className="text-accent hover:text-accent/80">
-            Instagram
-          </a>
-          <a href="#" className="text-accent hover:text-accent/80">
-            Discord
-          </a>
-          <a href="#" className="text-accent hover:text-accent/80">
-            GitHub
-          </a>
-        </div>
-      </div>
+        <hr />
+      </header>
+    </div>
   );
-};
-
-export default Header;
+}
