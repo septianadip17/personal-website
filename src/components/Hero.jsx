@@ -1,17 +1,27 @@
 import React from "react";
+import programmer from "../assets/programmer.svg";
+import grid from "../assets/icons/grid.svg"
+import profile from "../assets/icons/profile.svg"
+import monitor from "../assets/icons/monitor.svg"
+import code from "../assets/icons/code.svg"
+import edit from "../assets/icons/edit.svg"
+import mail from "../assets/icons/mail.svg"
+import greenMail from "../assets/icons/greenmail.svg"
 
+
+// sidebar navigation
 function SideNav() {
   const navItems = [
-    { icon: "fa-th", label: "Dashboard", color: "#7FFFD4" },
-    { icon: "fa-user", label: "User" },
-    { icon: "fa-code", label: "Code" },
-    { icon: "fa-desktop", label: "Desktop" },
-    { icon: "fa-pen", label: "Edit" },
-    { icon: "fa-envelope", label: "Mail" },
+    { icon: grid, label: "Dashboard", color: "#7FFFD4" },
+    { icon: profile, label: "User" },
+    { icon: code, label: "Code" },
+    { icon: monitor, label: "Desktop" },
+    { icon: edit, label: "Edit" },
+    { icon: mail, label: "Mail" },
   ];
 
   return (
-    <nav className="flex flex-col gap-6 bg-[#282E34] border border-white border-opacity-30 rounded-full p-2 w-12 h-[280px] justify-center items-center">
+    <nav className="flex flex-col gap-6 bg-bg2 border border-white border-opacity-30 rounded-full p-2 w-12 h-[280px] justify-center items-center">
       {navItems.map(({ icon, label, color }) => (
         <button
           key={label}
@@ -22,13 +32,14 @@ function SideNav() {
               : "text-[#F7C6C7]"
           }`}
         >
-          <i className={`fas ${icon}`}></i>
+          <img src={icon} alt={label} className="w-5 h-5" />
         </button>
       ))}
     </nav>
   );
 }
 
+// profile card
 function ProfileCard() {
   const skills = ["HTML", "CSS", "JS", "REACT"];
   const info = [
@@ -43,7 +54,7 @@ function ProfileCard() {
       <div className="absolute top-0 left-0 h-full w-1.5 rounded-tr-[100px] rounded-br-[100px] bg-gradient-to-b from-[#7FFFD4] to-[#00BFA5] -translate-x-full" />
       <div className="relative z-10 flex flex-col items-center gap-2">
         <img
-          src="https://storage.googleapis.com/a1aa/image/d0e199d8-66d9-4bd9-8e4d-5c3a845e4710.jpg"
+          src={programmer}
           alt="Avatar"
           className="w-20 h-20 rounded-full border-2 border-[#7FFFD4]"
         />
@@ -131,7 +142,7 @@ function StatsCard() {
 
 export default function Hero() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center px-6 py-10 bg-gray-900 text-white">
+    <section className="flex flex-col md:flex-row items-center justify-center px-6 py-10 bg-bg1 text-white">
       <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 w-full max-w-[1200px] mx-auto">
         <SideNav />
         <ProfileCard />
