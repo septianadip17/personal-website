@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import mouse from "../assets/icons/mouse.svg";
 
-const SectionTitle = () => {
+const SectionTitle = ({ title, description }) => {
   return (
     <div className="flex flex-col items-center gap-8">
       <div className="flex flex-col items-center">
@@ -10,7 +11,7 @@ const SectionTitle = () => {
         <div className="w-2 h-2 bg-white rotate-45 mt-1"></div>
       </div>
 
-      <h1 className="text-brand1 text-6xl font-normal">Title</h1>
+      <h1 className="text-brand1 text-6xl font-normal">{title}</h1>
 
       <div className="flex flex-col items-center gap-4">
         <div className="flex items-center space-x-6">
@@ -20,11 +21,21 @@ const SectionTitle = () => {
         </div>
 
         <p className="text-white text-center max-w-3xl text-base">
-          I had the pleasure of working with these awesome Projects
+          {description}
         </p>
       </div>
     </div>
   );
+};
+
+SectionTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
+SectionTitle.defaultProps = {
+  title: "Title",
+  description: "Description",
 };
 
 export default SectionTitle;

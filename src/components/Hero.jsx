@@ -59,7 +59,7 @@ function ProfileCard() {
         <img
           src={programmer}
           alt="Avatar"
-          className="w-20 h-20 rounded-full border-2 border-[#7FFFD4]"
+          className="w-20 h-20 rounded-full border-2 border-brand1"
         />
         <h2 className="text-lg font-mono font-semibold">Sinan</h2>
         <p className="text-xs font-mono text-white/80">Full-stack developer</p>
@@ -75,14 +75,15 @@ function ProfileCard() {
           {skills.map((skill) => (
             <span
               key={skill}
-              className="bg-[#7FFFD4] text-[#282E34] text-[10px] font-mono rounded-full px-2 py-[2px]"
+              className="bg-brand1 text-[#282E34] text-[10px] font-mono rounded-full px-2 py-[2px]"
             >
               {skill}
             </span>
           ))}
         </div>
         <button className="mt-6 bg-white text-[#282E34] rounded-full px-6 py-2 flex items-center gap-2 text-sm">
-          Download CV <img src={download} alt="download-icon" className="w-4 h-4" />
+          Download CV{" "}
+          <img src={download} alt="download-icon" className="w-4 h-4" />
         </button>
       </div>
     </div>
@@ -91,26 +92,26 @@ function ProfileCard() {
 
 function MainContent() {
   return (
-    <div className="flex flex-col max-w-[480px] w-full">
-      <h1 className="text-[#7FFFD4] text-[4rem] sm:text-[5rem] font-sans font-normal text-center md:text-left leading-[1]">
-        Developer
-      </h1>
+    <div className="flex flex-col max-w-[500px] w-full">
       <div className="mt-6 text-white font-sans">
-        <p className="text-xs text-[#7FFFD4] font-mono mb-1">&lt;h1&gt;</p>
+        <p className="text-xs text-brand1 font-mono mb-1">&lt;h1&gt;</p>
         <h2 className="text-4xl font-normal leading-tight">
           Hey
           <br />
-          I’m <span className="text-[#7FFFD4]">Sinan</span>,<br />
-          Full-Stack Developer
-          <span className="text-xs text-[#7FFFD4] font-mono ml-2">
+          I’m <span className="text-brand1">Septi</span>,<br />
+          Junior Frontend Developer
+          <span className="text-xs text-brand1 font-mono ml-2">
             &lt;/h1&gt;
           </span>
         </h2>
-        <p className="mt-6 text-xs font-mono text-white/80">
-          I help business grow by crafting amazing web experiences. If you’re
-          looking for a developer that likes to get stuff done,
+        <p className="text-xs mt-6 text-brand1 font-mono mb-1">&lt;p&gt;</p>
+        <p className=" text-xs font-mono text-white/80">
+          I am passionate about creating web experiences and eager to learn
+          more. If you&apos;re looking for an enthusiastic junior developer
+          ready to grow,
         </p>
-        <p className="mt-6 text-[#7FFFD4] font-mono text-lg flex items-center gap-2 cursor-pointer select-none">
+        <p className="text-xs text-brand1 font-mono mb-1">&lt;/p&gt;</p>
+        <p className="mt-6 text-brand1 font-mono text-lg flex items-center gap-2 cursor-pointer select-none">
           Let’s Talk
           <span className="bg-[#282E34] rounded-full p-1 flex items-center justify-center">
             <i className="fas fa-envelope" />
@@ -123,16 +124,16 @@ function MainContent() {
 
 function StatsCard() {
   const stats = [
-    { value: 4, label1: "Programming", label2: "Language" },
+    { value: 2, label1: "Programming", label2: "Language" },
     { value: 6, label1: "Development", label2: "Tools" },
-    { value: 8, label1: "Years of", label2: "Experience" },
+    { value: 1, label1: "Years of", label2: "Experience" },
   ];
 
   return (
-    <div className="bg-[#1B1F25] rounded-full max-w-[160px] w-full flex flex-col gap-8 py-8 px-6 text-white font-mono text-xs">
+    <div className="bg-bg2 rounded-full max-w-[160px] w-full flex flex-col gap-8 py-12 px-12 text-white font-mono text-xs">
       {stats.map(({ value, label1, label2 }) => (
         <div key={label1} className="flex items-center gap-3">
-          <span className="text-[#7FFFD4] text-2xl font-semibold">{value}</span>
+          <span className="text-brand1 text-2xl font-semibold">{value}</span>
           <div>
             <p>{label1}</p>
             <p>{label2}</p>
@@ -145,7 +146,11 @@ function StatsCard() {
 
 export default function Hero() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center px-6 py-10 bg-bg1 text-white">
+    <section className="flex flex-col items-center justify-center px-6 py-10 bg-bg1 text-white">
+      <h1 className="text-brand1 text-[4rem] sm:text-[5rem] font-sans font-normal text-center leading-[1] mb-10">
+        Developer
+      </h1>
+
       <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 w-full max-w-[1200px] mx-auto">
         <SideNav />
         <ProfileCard />

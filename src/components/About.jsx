@@ -9,7 +9,10 @@ const About = () => {
       className="relative min-h-screen flex flex-col items-center p-6"
       style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
     >
-      <SectionTitle />
+      <SectionTitle
+        title="Projects"
+        description="I had the pleasure of working with these awesome Projects"
+      />
 
       <div className="flex justify-between w-full max-w-6xl mt-16">
         {/* Left side - About content */}
