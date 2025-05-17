@@ -25,8 +25,8 @@ export default function Header() {
     <div className="bg-bg1">
       <header className="flex justify-between items-center border-b border-grey text-white mx-auto max-w-screen-2xl px-6 py-4 h-[100px]">
         {/* Logo */}
-        <div className="text-2xl font-bold whitespace-nowrap">
-          <span className="text-brand1">&lt;C/&gt;</span> Septian Adi Pratama
+        <div className="text-2xl font-bold whitespace-nowrap font-mono">
+          <span className="text-brand1 ">&lt;C/&gt;</span> Septian Adi Pratama
         </div>
 
         {/* Desktop Nav */}

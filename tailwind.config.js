@@ -19,7 +19,7 @@ export default {
       },
       fontFamily: {
         sans: ["Ubuntu", ...defaultTheme.fontFamily.sans],
-        mono: ["Fira Code", ...defaultTheme.fontFamily.mono],
+        mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
       },
     },
   },
