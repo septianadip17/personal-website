@@ -1,49 +1,31 @@
 import React from "react";
-
+import htmlIcon from "../assets/icons/html.svg";
+import cssIcon from "../assets/icons/css.svg";
+import jsIcon from "../assets/icons/js.svg";
+import reactIcon from "../assets/icons/react.svg";
+import background from "../assets/skills.svg";
+import SectionTitle from "./SectionTitle";
+import monitor from "../assets/icons/black-monitor.svg";
 
 const Skills = () => {
   return (
     <div className="bg-[#1a2633] font-[Roboto Mono] relative overflow-x-hidden">
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-60">
         <img
           alt="Background image showing blurred code on a dark screen"
           className="w-full h-full object-cover"
           height="1080"
-          src="https://storage.googleapis.com/a1aa/image/6cb35086-6056-4441-0177-f69a654b4593.jpg"
+          src={background}
           width="1920"
         />
       </div>
       <section className="relative z-10 flex flex-col items-center pt-20 px-6 sm:px-10 md:px-20 lg:px-32 xl:px-40">
-        <div className="flex items-center space-x-6 mb-2">
-          <div className="text-[#00f0d8] text-3xl sm:text-4xl md:text-5xl leading-none">
-            <i className="fas fa-mouse-pointer"></i>
-          </div>
-          <div className="border-l border-[#00f0d8] h-12"></div>
-          <div className="text-[#00f0d8] text-[6rem] sm:text-[8rem] md:text-[10rem] font-extralight leading-none select-none">
-            &lt;/&gt;
-          </div>
-        </div>
-        <h2 className="text-[#00f0d8] text-4xl sm:text-5xl md:text-6xl font-normal mb-1 select-none">
-          Skills
-        </h2>
-        <div className="flex items-center space-x-2 mb-6">
-          <div className="w-14 h-1 bg-[#00f0d8] rounded-full"></div>
-          <div className="w-3 h-3 bg-[#00f0d8] rounded-full"></div>
-        </div>
-        <p className="text-white text-xs sm:text-sm md:text-base mb-12 text-center max-w-xl">
-          I am striving to never stop{" "}
-          <span className="font-semibold">learning</span> and improving
-        </p>
+        <SectionTitle title="Skills" description="I am striving to never stop learning and improving"/>
         <div className="flex flex-col sm:flex-row justify-center gap-10 mb-16 w-full max-w-4xl">
           <div className="bg-[#a6f9f6] rounded-md w-64 py-6 flex flex-col items-center shadow-md">
-            <i className="fas fa-tv text-xl mb-2"></i>
+            <img src={monitor} alt="" />
             <h3 className="text-black text-lg mb-1">Web Developement</h3>
             <p className="text-xs text-black/70">HTML·CSS·JS·REACT</p>
-          </div>
-          <div className="bg-[#a6f9f6] rounded-md w-64 py-6 flex flex-col items-center shadow-md">
-            <i className="fas fa-mobile-alt text-xl mb-2"></i>
-            <h3 className="text-black text-lg mb-1">App Developement</h3>
-            <p className="text-xs text-black/70">iOS·Android</p>
           </div>
         </div>
         <div className="flex justify-center gap-20 flex-wrap max-w-4xl w-full">
@@ -53,7 +35,7 @@ const Skills = () => {
                 alt="HTML5 logo white on orange circular background"
                 className="w-12 h-12"
                 height="48"
-                src="https://storage.googleapis.com/a1aa/image/180089bb-80de-4dde-86ba-409e1e68d9bc.jpg"
+                src={htmlIcon}
                 width="48"
               />
             </div>
@@ -67,7 +49,7 @@ const Skills = () => {
                 alt="CSS3 logo white on blue circular background"
                 className="w-12 h-12"
                 height="48"
-                src="https://storage.googleapis.com/a1aa/image/be0ecef9-0b30-4a06-642a-3a6fddd763f6.jpg"
+                src={cssIcon}
                 width="48"
               />
             </div>
@@ -81,7 +63,7 @@ const Skills = () => {
                 alt="JavaScript logo white on yellow circular background"
                 className="w-12 h-12"
                 height="48"
-                src="https://storage.googleapis.com/a1aa/image/f81c0c61-1418-4a16-5dd5-d5a7a028e40c.jpg"
+                src={jsIcon}
                 width="48"
               />
             </div>
@@ -95,7 +77,7 @@ const Skills = () => {
                 alt="React logo white on blue circular background"
                 className="w-12 h-12"
                 height="48"
-                src="https://storage.googleapis.com/a1aa/image/05bb0c1d-5c6d-4289-790f-879835612720.jpg"
+                src={reactIcon}
                 width="48"
               />
             </div>

@@ -20,7 +20,7 @@ const SectionTitle = ({ title, description }) => {
           <div className="w-3 h-3 bg-brand1 rounded-full"></div>
         </div>
 
-        <p className="text-white text-center max-w-3xl text-base">
+        <p className="text-white text-center mb-5 max-w-3xl text-base">
           {description}
         </p>
       </div>
