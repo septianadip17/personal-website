@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Skills = () => {
   return (
     <div className="bg-[#1a2633] font-[Roboto Mono] relative overflow-x-hidden">
