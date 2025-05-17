@@ -1,6 +1,13 @@
+import React from "react";
+import Hero from "./components/Hero";
+import Header from "./components/Header";
+
 const App = () => {
   return (
-    <h1>Hello</h1>
+    <div>
+      <Header/>
+      <Hero />
+    </div>
   );
 };
 
