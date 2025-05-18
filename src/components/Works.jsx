@@ -2,6 +2,7 @@ import React from "react";
 
 const Works = () => {
   return (
+    // structure of the works section
     <section className="bg-bg1 min-h-screen flex flex-col items-center justify-center px-4 text-center text-[#2af9f4] relative">
       <div className="flex flex-col items-center mb-6">
         <div className="flex flex-col items-center">
