@@ -61,8 +61,8 @@ function ProfileCard() {
           alt="Avatar"
           className="w-20 h-20 rounded-full border-2 border-brand1"
         />
-        <h2 className="text-lg font-mono font-semibold">Sinan</h2>
-        <p className="text-xs font-mono text-white/80">Full-stack developer</p>
+        <h2 className="text-lg font-mono font-semibold">Septian</h2>
+        <p className="text-xs font-mono text-white/80">Junior Web Developer</p>
         <ul className="mt-4 space-y-2 text-xs font-mono text-white/80 text-left w-full max-w-[220px]">
           {info.map(({ icon, text, alt }) => (
             <li key={text} className="flex items-center gap-2">
